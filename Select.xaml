@@ -1,0 +1,11 @@
+﻿<Window x:Class="ReadWriteRFID.Select"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Attendance Monitoring System" Height="300" Width="300">
+    <Grid Background="#FF4DB3EE">
+        <Button x:Name="btnDaily" Content="Daily Attendance" HorizontalAlignment="Left" Margin="28,80,0,0" VerticalAlignment="Top" Width="110" Height="33" Click="btnDaily_Click" Background="#FF19283F" Foreground="#FFF7F3F3"/>
+        <Button x:Name="btnEvent" Content="Events Attendance" HorizontalAlignment="Left" Margin="158,80,0,0" VerticalAlignment="Top" Width="110" Height="33" Click="btnEvent_Click" Foreground="#FFF7EDED" Background="#FF19283F"/>
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Left" Margin="90,138,0,0" VerticalAlignment="Top" Width="110" Height="32" Click="btnHome_Click" Background="#FF19283F" Foreground="#FFF5EDED"/>
+
+    </Grid>
+</Window>

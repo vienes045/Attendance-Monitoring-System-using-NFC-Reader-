@@ -1,0 +1,21 @@
+﻿<Window x:Class="ReadWriteRFID.Update"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Attendance Monitoring System" Height="350.254" Width="683.993">
+    <Grid x:Name="grid" Background="#FF4DB3EE">
+
+        <TextBox x:Name="txtCardUID" HorizontalAlignment="Left" Height="22" Margin="157,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="txtStudentName" HorizontalAlignment="Left" Height="22" Margin="157,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="txtCourse" HorizontalAlignment="Left" Height="22" Margin="157,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" RenderTransformOrigin="0.106,-0.061" FontSize="9"/>
+        <Label Content="Card UID:" HorizontalAlignment="Left" Margin="77,60,0,0" VerticalAlignment="Top" Width="63" FontWeight="Bold"/>
+        <Label Content="Student Name:" HorizontalAlignment="Left" Margin="46,82,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold"/>
+        <Label Content="Student Course:" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold"/>
+        <Button x:Name="btnUpdate" Content="UPDATE" HorizontalAlignment="Left" Margin="51,190,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="btnUpdate_Click" Background="#FF19283F" Foreground="#FFF5F3F3"/>
+        <Button x:Name="btnDelete" Content="DELETE" HorizontalAlignment="Left" Margin="158,190,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="btnDelete_Click" Foreground="#FFF5F3F3" Background="#FF19283F"/>
+        <Button x:Name="btnHome" Content="HOME" HorizontalAlignment="Left" Margin="264,190,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="btnHome_Click" Background="#FF19283F" Foreground="#FFF9F5F5"/>
+        <Image x:Name="imageViewer" HorizontalAlignment="Left" Height="258" Margin="378,12,0,0" VerticalAlignment="Top" Width="288" OpacityMask="Black" Stretch="Fill" Source="icons/imagelogo.png"/>
+        <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Height="23" Margin="157,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <Label Content="Student Number:" HorizontalAlignment="Left" Margin="31,140,0,0" VerticalAlignment="Top" Width="109" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

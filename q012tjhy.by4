@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+
+namespace ReadWriteRFID
+{
+    /// <summary>
+    /// Interaction logic for Home.xaml
+    /// </summary>
+    public partial class Home : Window
+    {
+        public Home()
+        {
+            InitializeComponent();
+            RightToLeftMarquee();
+        }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        public class NegatingConverter : IValueConverter
+    {
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value is double)
+            {
+                return -((double)value);
+            }
+            return value;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value is double)
+            {
+                return +(double)value;
+            }
+            return value;
+        }
+    }
+}
+        private void RightToLeftMarquee()
+        {
+            double height = canMain.ActualHeight - lblName.ActualHeight;
+            lblName.Margin = new Thickness(0, height / 2, 0, 0);
+            System.Windows.Media.Animation.DoubleAnimation doubleAnimation = new System.Windows.Media.Animation.DoubleAnimation();
+            doubleAnimation.From = -lblName.ActualWidth;
+            doubleAnimation.To = canMain.ActualWidth;
+            doubleAnimation.RepeatBehavior = System.Windows.Media.Animation.RepeatBehavior.Forever;
+            doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(10));
+            lblName.BeginAnimation(Canvas.RightProperty, doubleAnimation);
+        }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow register = new MainWindow();
+            register.Show();
+            this.Close();
+        }
+
+        
+
+        private void btnAttendance_Click(object sender, RoutedEventArgs e)
+        {
+            AddEvent aizen3 = new AddEvent();
+            aizen3.Show();
+            this.Close();
+        }
+
+        private void btnReport_Click(object sender, RoutedEventArgs e)
+        {
+            Report rep = new Report();
+            rep.Show();
+            this.Close();
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Update aizen5 = new Update();
+            aizen5.Show();
+            this.Close();
+        }
+    }
+}

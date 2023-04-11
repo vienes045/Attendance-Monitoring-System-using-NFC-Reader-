@@ -1,0 +1,14 @@
+﻿<Window x:Class="ReadWriteRFID.AboutUs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Attendance Monitoring System " Height="479.105" Width="786.567" Activated="Window_Activated">
+    <Grid Background="#FF4DB3EE">
+        <Canvas Margin="-10,0,10,0">
+            <Label x:Name="lblName" Content="Developed by: Florante B. Vienes, Cristina Q. Malazarte, Nilda Laspiñas, Helro N. Jamero, Jayson G. Panal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="779" Height="37" FontFamily="Monotype Corsiva" FontSize="19" FontWeight="Bold" Canvas.Left="10" Canvas.Top="412"/>
+            <Button x:Name="btnHome" Content="HOME" Canvas.Left="28" Canvas.Top="167" Width="126" Height="46" Background="#FF19283F" Foreground="#FFF7F1F1" Click="btnHome_Click"/>
+        </Canvas>
+        <Image HorizontalAlignment="Left" Height="152" VerticalAlignment="Top" Width="167" Source="icons/bits.png" Stretch="Fill" Margin="0,10,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="166" Margin="47,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="683" Text="&#x9;This Capstone Project entitled &quot;Student Attendance Monitoring using NFC Reader in SLSU-CAALS&quot; is presented by the 4th Year BSIT students to the Faculty of Southern Leyte State University - College of Aquatic and Applied Life Sciences.&#xD;&#xA;&#xD;&#xA;&#x9;In fulfillment of the Requirements for the Degree BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY." FontFamily="Times New Roman" FontSize="20"/>
+
+    </Grid>
+</Window>
